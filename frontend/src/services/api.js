@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // Base API config (Vite proxies /api to backend port in development)
-const API_BASE = '';
+const API_BASE = import.meta.env.DEV ? '' : 'https://datalens-ai-oyt0.onrender.com';
 
 const apiClient = axios.create({
   baseURL: API_BASE,
